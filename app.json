@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Real-State",
+    "slug": "Real-State",
+    "version": "1.0.0",
+    "extra": {
+      "firebase": {
+        "apiKey": "AIzaSyDFATaCm2sHZ43l5p248ruNqe9NpHMzcRw",
+        "authDomain": "authentication-app-832db.firebaseapp.com",
+        "databaseURL": "https://authentication-app-832db-default-rtdb.firebaseio.com",
+        "projectId": "authentication-app-832db",
+        "storageBucket": "authentication-app-832db.appspot.com",
+        "messagingSenderId": "1099249970529",
+        "appId": "1:1099249970529:web:971c227b957ad23fc22920"
+      },
+      "router": {},
+      "eas": {
+        "projectId": "8706ba71-2d94-41c5-b846-6d58631d4eeb"
+      }
+    },
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "realstate",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.samihaider.realstate"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

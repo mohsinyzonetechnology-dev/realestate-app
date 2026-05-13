@@ -1,0 +1,593 @@
+[debug] [2026-05-13T11:18:43.560Z] ----------------------------------------------------------------------
+[debug] [2026-05-13T11:18:43.565Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2026-05-13T11:18:43.566Z] CLI Version:   15.17.0
+[debug] [2026-05-13T11:18:43.567Z] Platform:      win32
+[debug] [2026-05-13T11:18:43.567Z] Node Version:  v25.9.0
+[debug] [2026-05-13T11:18:43.567Z] Time:          Wed May 13 2026 16:18:43 GMT+0500 (Pakistan Standard Time)
+[debug] [2026-05-13T11:18:43.567Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-13T11:18:48.613Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-13T11:18:48.614Z] > authorizing via signed-in user (sh7183372@gmail.com)
+[debug] [2026-05-13T11:18:48.614Z] [iam] checking project authentication-app-832db for permissions ["firebase.projects.get"]
+[debug] [2026-05-13T11:18:48.617Z] Checked if tokens are valid: false, expires at: 1778621072734
+[debug] [2026-05-13T11:18:48.617Z] Checked if tokens are valid: false, expires at: 1778621072734
+[debug] [2026-05-13T11:18:48.618Z] > refreshing access token with scopes: []
+[debug] [2026-05-13T11:18:48.622Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-13T11:18:48.623Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-13T11:18:49.232Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-13T11:18:49.233Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-13T11:18:49.258Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/authentication-app-832db:testIamPermissions [none]
+[debug] [2026-05-13T11:18:49.259Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/authentication-app-832db:testIamPermissions  x-goog-user-project=authentication-app-832db
+[debug] [2026-05-13T11:18:49.260Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/authentication-app-832db:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-05-13T11:18:50.839Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/authentication-app-832db:testIamPermissions 200
+[debug] [2026-05-13T11:18:50.839Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/authentication-app-832db:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2026-05-13T11:18:50.863Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-13T11:18:50.923Z] defaultcredentials: writing to file C:\Users\Dell\AppData\Roaming\firebase\sh7183372_gmail_com_application_default_credentials.json
+[debug] [2026-05-13T11:18:50.928Z] DEBUG: Setting GAC to C:\Users\Dell\AppData\Roaming\firebase\sh7183372_gmail_com_application_default_credentials.json
+[debug] [2026-05-13T11:18:50.929Z] Checked if tokens are valid: true, expires at: 1778674728233
+[debug] [2026-05-13T11:18:50.929Z] Checked if tokens are valid: true, expires at: 1778674728233
+[debug] [2026-05-13T11:18:50.929Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/authentication-app-832db/adminSdkConfig [none]
+[debug] [2026-05-13T11:18:51.554Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/authentication-app-832db/adminSdkConfig 200
+[debug] [2026-05-13T11:18:51.555Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/authentication-app-832db/adminSdkConfig {"projectId":"authentication-app-832db","databaseURL":"https://authentication-app-832db-default-rtdb.firebaseio.com","storageBucket":"authentication-app-832db.firebasestorage.app"}
+[debug] [2026-05-13T11:18:51.591Z] [functions] Watching "D:\learning ReactNative\Real-State\functions" for Cloud Functions...
+[debug] [2026-05-13T11:18:51.604Z] Validating nodejs source
+[debug] [2026-05-13T11:18:54.068Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:18:54.069Z] Building nodejs source
+[debug] [2026-05-13T11:18:54.069Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:18:54.075Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:18:54.089Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8191
+
+[info] ◇ injected env (1) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+
+[debug] [2026-05-13T11:18:55.871Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:18:59.994Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:18:59.999Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5000/authentication-app-832db/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc, tasks 
+[debug] [2026-05-13T11:28:26.867Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:28:27.884Z] Validating nodejs source
+[debug] [2026-05-13T11:28:30.981Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:28:30.981Z] Building nodejs source
+[debug] [2026-05-13T11:28:30.981Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:28:30.984Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:28:30.996Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8636
+
+[info] ◇ injected env (1) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+[debug] [2026-05-13T11:28:32.770Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:28:36.857Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:29:29.305Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:29:30.344Z] Validating nodejs source
+[debug] [2026-05-13T11:29:33.195Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:29:33.195Z] Building nodejs source
+[debug] [2026-05-13T11:29:33.196Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:29:33.200Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:29:33.213Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8963
+
+[info] ◇ injected env (1) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+[debug] [2026-05-13T11:29:35.584Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:29:39.675Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:39:16.750Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:39:17.945Z] Validating nodejs source
+[debug] [2026-05-13T11:39:21.099Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:39:21.100Z] Building nodejs source
+[debug] [2026-05-13T11:39:21.100Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:39:21.103Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:39:21.122Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8847
+
+[info] ◇ injected env (1) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+
+[debug] [2026-05-13T11:39:23.581Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:39:27.665Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:39:57.489Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:39:58.492Z] Validating nodejs source
+[debug] [2026-05-13T11:40:00.836Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:40:00.837Z] Building nodejs source
+[debug] [2026-05-13T11:40:00.837Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:40:00.839Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:40:00.847Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8632
+
+[info] ◇ injected env (1) from .env // tip: ⌘ suppress logs { quiet: true }
+
+[debug] [2026-05-13T11:40:03.407Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:40:07.507Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:45:37.851Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:45:38.993Z] Validating nodejs source
+[debug] [2026-05-13T11:45:42.359Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:45:42.359Z] Building nodejs source
+[debug] [2026-05-13T11:45:42.359Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:45:42.369Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:45:42.388Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8261
+
+[info] ◇ injected env (1) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+[debug] [2026-05-13T11:45:44.714Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:45:48.782Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:47:17.611Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:47:18.632Z] Validating nodejs source
+[debug] [2026-05-13T11:47:21.469Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:47:21.470Z] Building nodejs source
+[debug] [2026-05-13T11:47:21.470Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:47:21.472Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:47:21.484Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8349
+
+[info] ◇ injected env (1) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+
+[debug] [2026-05-13T11:47:23.616Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:47:27.688Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:49:26.063Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:49:27.071Z] Validating nodejs source
+[debug] [2026-05-13T11:49:30.158Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:49:30.158Z] Building nodejs source
+[debug] [2026-05-13T11:49:30.158Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:49:30.162Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:49:30.171Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8031
+
+[info] ◇ injected env (1) from .env // tip: ⌘ suppress logs { quiet: true }
+
+[debug] [2026-05-13T11:49:32.357Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:49:36.459Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:53:08.818Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:53:09.957Z] Validating nodejs source
+[debug] [2026-05-13T11:53:13.609Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:53:13.610Z] Building nodejs source
+[debug] [2026-05-13T11:53:13.610Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:53:13.615Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:53:13.628Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8959
+
+[info] ◇ injected env (1) from .env // tip: ⌘ suppress logs { quiet: true }
+
+[debug] [2026-05-13T11:53:15.990Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:53:20.106Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:56:48.953Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:56:49.959Z] Validating nodejs source
+[debug] [2026-05-13T11:56:52.271Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:56:52.272Z] Building nodejs source
+[debug] [2026-05-13T11:56:52.272Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:56:52.275Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:56:52.288Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8836
+
+[info] ◇ injected env (1) from .env // tip: ⌘ enable debugging { debug: true }
+
+[debug] [2026-05-13T11:56:54.019Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:56:58.102Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T11:59:34.550Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T11:59:35.557Z] Validating nodejs source
+[debug] [2026-05-13T11:59:38.158Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:59:38.159Z] Building nodejs source
+[debug] [2026-05-13T11:59:38.159Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:59:38.161Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:59:38.173Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8829
+
+[debug] [2026-05-13T11:59:40.020Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[info] ◇ injected env (1) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+
+[debug] [2026-05-13T11:59:40.306Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:59:41.039Z] Validating nodejs source
+[debug] [2026-05-13T11:59:44.033Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T11:59:44.033Z] Building nodejs source
+[debug] [2026-05-13T11:59:44.033Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T11:59:44.037Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T11:59:44.052Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[debug] [2026-05-13T11:59:44.437Z] [functions] Loaded functions definitions from source: api.
+[info] Serving at port 8922
+
+[info] ◇ injected env (1) from .env // tip: ⌘ enable debugging { debug: true }
+
+[debug] [2026-05-13T11:59:46.185Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T11:59:50.248Z] [functions] Loaded functions definitions from source: api.
+[debug] [2026-05-13T12:00:26.625Z] DEBUG: File D:\learning ReactNative\Real-State\functions\index.js changed, reloading triggers
+[debug] [2026-05-13T12:00:27.634Z] Validating nodejs source
+[debug] [2026-05-13T12:00:30.406Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-05-13T12:00:30.407Z] Building nodejs source
+[debug] [2026-05-13T12:00:30.407Z] Failed to find version of module node: reached end of search path D:\learning ReactNative\Real-State\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "25". Using node@25 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2026-05-13T12:00:30.409Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-13T12:00:30.420Z] Found firebase-functions binary at 'D:\learning ReactNative\Real-State\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8781
+
+[info] ◇ injected env (1) from .env // tip: ⌘ override existing { override: true }
+
+[debug] [2026-05-13T12:00:32.119Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-13T12:00:36.163Z] [functions] Loaded functions definitions from source: api.

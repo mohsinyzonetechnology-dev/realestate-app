@@ -1,0 +1,47 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: "#f5f5f5" },
+  scrollContent: { flexGrow: 1, justifyContent: "center", padding: 20 },
+  card: {
+    backgroundColor: "white",
+    padding: 25,
+    borderRadius: 20,
+    elevation: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 25,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#f9f9f9",
+    borderRadius: 10,
+    paddingHorizontal: 15,
+    marginTop: 15,
+    height: 55,
+    borderWidth: 1,
+    borderColor: "#eee",
+  },
+  icon: { marginRight: 10 },
+  input: { flex: 1, fontSize: 16 },
+  errorText: { color: "red", fontSize: 12, marginTop: 5, marginLeft: 5 },
+  button: {
+    backgroundColor: "#1877F2",
+    height: 55,
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 25,
+  },
+  buttonText: { color: "white", fontSize: 18, fontWeight: "bold" },
+  divider: { height: 1, backgroundColor: "#eee", marginVertical: 25 },
+  toggleText: { color: "#1877F2", textAlign: "center", fontWeight: "500" },
+});

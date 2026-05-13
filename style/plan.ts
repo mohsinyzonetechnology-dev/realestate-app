@@ -1,0 +1,91 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: "#f8f9fa" },
+  scrollContent: { padding: 20, alignItems: "center" },
+  header: {
+    fontSize: 28,
+    fontWeight: "bold",
+    marginBottom: 30,
+    marginTop: 20,
+    color: "#333",
+  },
+  planCard: {
+    width: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    padding: 20,
+    marginBottom: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderWidth: 1,
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  badge: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+    position: "absolute",
+    top: -12,
+    left: 15,
+  },
+  badgeText: { color: "#fff", fontWeight: "bold", fontSize: 12 },
+  planDetails: { flex: 1 },
+  priceText: { fontSize: 24, fontWeight: "bold", color: "#222" },
+  postCount: { fontSize: 16, color: "#666", marginTop: 4 },
+  radio: {
+    height: 24,
+    width: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  radioInner: { height: 12, width: 12, borderRadius: 6 },
+  subscribeBtn: {
+    backgroundColor: "#62bb81",
+    width: "100%",
+    padding: 18,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 20,
+  },
+  subscribeText: { color: "#fff", fontSize: 18, fontWeight: "bold" },
+  walletHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    marginBottom: 20,
+  },
+
+  walletTitle: {
+    fontSize: 16,
+    color: "#555",
+  },
+
+  walletAmount: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#000",
+  },
+  toast: {
+    position: "absolute",
+    bottom: -180,
+    left: 20,
+    right: 20,
+    backgroundColor: "#47c176",
+    padding: 14,
+    borderRadius: 10,
+    alignItems: "center",
+  },
+
+  toastText: {
+    color: "#fff",
+    fontSize: 14,
+  },
+});
