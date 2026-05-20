@@ -20,6 +20,10 @@ import { styles } from "../../../style/walletScreen";
 const WalletScreen = () => {
   const [loading, setLoading] = useState(false);
   const [showMsg] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 24271f71e8db66cdfed1193bde9c5fec9922dcda
   const balance = useMarketplaceStore(
     (s) => s.users[s.currentUser?.uid || ""]?.balance ?? 0,
   );
@@ -46,10 +50,24 @@ const WalletScreen = () => {
     try {
       setLoading(true);
 
+<<<<<<< HEAD
       const response = await fetch(`${API_URL}/create-checkout-session`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+=======
+      const response = await fetch(
+        "http://localhost:5000/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            product: "T-Shirt",
+            amount: 500,
+          }),
+>>>>>>> 24271f71e8db66cdfed1193bde9c5fec9922dcda
         },
         body: JSON.stringify({
           product: "T-Shirt",
@@ -66,9 +84,13 @@ const WalletScreen = () => {
       }
 
       await WebBrowser.openBrowserAsync(data.url);
+<<<<<<< HEAD
       console.log("checkout URL received :", data.url);
     } catch (e: any) {
       console.log(e);
+=======
+    } catch (e: any) {
+>>>>>>> 24271f71e8db66cdfed1193bde9c5fec9922dcda
       Alert.alert("Payment Error", e.message);
     } finally {
       setLoading(false);
