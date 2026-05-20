@@ -7,7 +7,6 @@ import {
   ActivityIndicator,
   Alert,
   Keyboard,
-  Platform,
   ScrollView,
   Text,
   TouchableOpacity,
@@ -20,40 +19,17 @@ import { styles } from "../../../style/walletScreen";
 const WalletScreen = () => {
   const [loading, setLoading] = useState(false);
   const [showMsg] = useState(false);
-  const [keyboardPadding, setKeyboardPadding] = useState(20);
 
   const balance = useMarketplaceStore(
     (s) => s.users[s.currentUser?.uid || ""]?.balance ?? 0,
   );
 
-  // 1. Handle Keyboard
-  useEffect(() => {
-    const showSubscription = Keyboard.addListener(
-      Platform.OS === "ios" ? "keyboardWillShow" : "keyboardDidShow",
-      (e) => setKeyboardPadding(e.endCoordinates.height + 20),
-    );
-    const hideSubscription = Keyboard.addListener(
-      Platform.OS === "ios" ? "keyboardWillHide" : "keyboardDidHide",
-      () => setKeyboardPadding(20),
-    );
-
-    return () => {
-      showSubscription.remove();
-      hideSubscription.remove();
-    };
-  }, []);
-
-  // 2. Properly handle deep linking & close browser (FIXED)
   useEffect(() => {
     const subscription = Linking.addEventListener("url", ({ url }) => {
-      console.log("Redirect URL:", url);
-
-      // Close the in-app browser when redirected back to the app
       WebBrowser.dismissBrowser();
 
       if (url.includes("payment-success")) {
         alert("Payment successful");
-        // Trigger balance update here
       }
 
       if (url.includes("payment-cancel")) {
@@ -62,7 +38,7 @@ const WalletScreen = () => {
     });
 
     return () => {
-      subscription.remove(); // Cleanup listener to prevent memory leaks
+      subscription.remove();
     };
   }, []);
 
@@ -70,44 +46,30 @@ const WalletScreen = () => {
     try {
       setLoading(true);
 
-      const redirectUrl = Linking.createURL("payment-success");
-      const cancelUrl = Linking.createURL("payment-cancel");
-
       const response = await fetch(
-        "http://127.0.0.1:5001/authentication-app-832db/us-central1/api/create-payment",
+        "http://localhost:5000/create-checkout-session",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            product: "T-Shirt",
             amount: 500,
-            currency: "PKR",
-            redirect_url: redirectUrl,
-            cancel_url: cancelUrl,
           }),
         },
       );
 
       const data = await response.json();
-      console.log("FULL RESPONSE:", JSON.stringify(data, null, 2));
 
-      const token = data?.data?.token || data?.token;
-      console.log("Actual Token", token);
-
-      if (!token) {
-        Alert.alert("Error", "No Safepay token found");
+      if (!data?.url) {
+        Alert.alert("Error", "No checkout URL received");
         return;
       }
 
-      const paymentUrl = `https://sandbox.api.getsafepay.com/${token}`;
-
-      // Open Gateway
-      await WebBrowser.openBrowserAsync(paymentUrl);
-      console.log("PAYMENT URL:", paymentUrl);
+      await WebBrowser.openBrowserAsync(data.url);
     } catch (e: any) {
-      console.log(e);
-      Alert.alert("Payment Error", e?.message || "Something went wrong");
+      Alert.alert("Payment Error", e.message);
     } finally {
       setLoading(false);
     }
@@ -120,7 +82,7 @@ const WalletScreen = () => {
           contentContainerStyle={{ flexGrow: 1 }}
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}>
-          <View style={[styles.container, { paddingBottom: keyboardPadding }]}>
+          <View style={[styles.container]}>
             <TouchableOpacity
               onPress={() => router.back()}
               style={styles.backBtn}>
